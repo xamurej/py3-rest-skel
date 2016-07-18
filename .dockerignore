@@ -2,7 +2,6 @@
 tests/
 venv/
 docs/
-sphinx/
 *.egg-info
 build
 .cache
