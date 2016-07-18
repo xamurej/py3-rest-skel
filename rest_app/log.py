@@ -12,10 +12,10 @@ from pythonjsonlogger import jsonlogger
 
 class Logger(object):
     LOGGERLIST = [
-        'options',
         'main',
-        'output',
+        'options',
         'tornado.access',
+        'tornado.application',
         'tornado.generic',
     ]
 
