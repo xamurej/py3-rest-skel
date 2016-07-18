@@ -31,7 +31,7 @@ class Logger(object):
 
         for name in self.LOGGERLIST:
             logger = logging.getLogger(name)
-            # logger.setLevel(logging.DEBUG)
+            logger.setLevel(logging.DEBUG)
             logger.addHandler(self.handler)
 
     def setLevel(self, level):
