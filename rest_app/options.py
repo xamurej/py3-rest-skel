@@ -18,7 +18,8 @@ class Options(object):
         self.parser = configargparse.ArgParser(
             default_config_files=['./config.ini'])
 
-        self.parser.add('-c', '--my-config',
+        self.parser.add('-c',
+                        '--my-config',
                         required=False,
                         is_config_file=True,
                         help='config file path')
