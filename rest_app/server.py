@@ -18,15 +18,18 @@ LOG = log.Logger.get()
 
 
 def main():
-    # configargparse raises a SystemExit on error
-    args = options.Options().parse()
-    LOG.debug(args)
+    try:
+        args = options.Options().parse()
+        LOG.debug(args)
+    except SystemExit:
+        return 1
 
     routes = get_routes(app_routes)
     LOG.error(json.dumps([(url, repr(rh)) for url, rh in routes]))
     application = Application(routes=routes, settings={})
     application.listen(args.port)
     tornado.ioloop.IOLoop.instance().start()
+
 
 if __name__ == '__main__':
     sys.exit(main())
