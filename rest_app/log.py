@@ -11,9 +11,9 @@ from pythonjsonlogger import jsonlogger
 
 
 class Logger(object):
+    APP_LOGGER_NAME = 'app'
     LOGGERLIST = [
-        'main',
-        'options',
+        APP_LOGGER_NAME,
         'tornado.access',
         'tornado.application',
         'tornado.generic',
@@ -38,5 +38,5 @@ class Logger(object):
         self.handler.setLevel(level)
 
     @staticmethod
-    def get(logger_name):
-        return logging.getLogger(logger_name)
+    def get():
+        return logging.getLogger(Logger.APP_LOGGER_NAME)

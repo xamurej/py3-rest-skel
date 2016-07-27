@@ -6,7 +6,7 @@ from tornado_json import schema
 
 from rest_app import log
 
-LOG = log.Logger.get('app')
+LOG = log.Logger.get()
 
 
 class CarsHandler(APIHandler):

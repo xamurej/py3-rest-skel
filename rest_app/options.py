@@ -9,7 +9,7 @@ import configargparse
 
 from rest_app import log
 
-LOG = log.Logger.get('options')
+LOG = log.Logger.get()
 
 
 class Options(object):

@@ -14,7 +14,7 @@ import routes as app_routes
 
 import json
 
-LOG = log.Logger.get('main')
+LOG = log.Logger.get()
 
 
 def main():
